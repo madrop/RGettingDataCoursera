@@ -5,9 +5,30 @@ Details about these data can be found in original study, see files **README_orig
 
 ##Variables
 File consist of these variables:
-* 66 variables of 561 original variables. Only means and standard deviations of selected variables which were calculated on 50 Hz fixed-width sliding windows of 2.56 sec samples. Data were sampled from accelerometer and gyroscope of a smartphone, based on movements of subjects. These variables are normalized and bounded within [-1,1].
+* 66 variables of 561 original variables. Only **means** and **standard deviations** were selected. These means and standard deviations were calculated on **primary** variables, which were sampled using 50 Hz fixed-width sliding windows of 2.56 sec. So they are means and standard deviations for each time window for each primary variable. Data were sampled from accelerometer and gyroscope of a smartphone, based on movements of subjects. These variables are normalized and bounded within [-1,1].
 * Subject is a number, which identifies one of 30 persons who carried activity described in variable Activity, to which are data from accelerometer and gyroscope (see 66 variables above) related
 * Activity is a factor, which describes type of movement, which was carried out by Subject.
+
+###List of primary variables
+-XYZ is used to denote 3-axial signals in the X, Y and Z directions.
+
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
 
 ##Data transformation
 Data should have same values as used in study. They were only merged from six files into one dataset. 3 files were related to test set and 3 files were related to train set. For each set, the data from 3 files were merged based on an row index in a file. The files have same number of rows.
